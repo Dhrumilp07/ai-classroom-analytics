@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from security.auth import verify
+from ..security.auth import verify
 import random
 
 app = Flask(__name__)

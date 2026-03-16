@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python","backend/app.py"]
+CMD ["python", "-m", "backend.app"]
