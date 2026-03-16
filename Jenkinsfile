@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run Test') {
             steps {
-                echo 'Pipeline is working!!!!'
+                echo 'Pipeline is working!'
             }
         }
 
