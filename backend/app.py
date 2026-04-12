@@ -1,5 +1,8 @@
 from flask import Flask, jsonify, request
-from ..security.auth import verify
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from security.auth import verify
 import random
 
 app = Flask(__name__)
