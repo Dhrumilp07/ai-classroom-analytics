@@ -8,7 +8,7 @@ An AI-powered application designed to detect and rate student engagement in a cl
 * **Engagement Analytics Algorithm:** Calculates live engagement scores based on student presence.
 * **Backend API & Analytics Server:** A lightweight Flask API protected by API key verification for internal data streaming.
 * **Machine Learning & MLOps setup:** Standard experiment tracking built-in using Scikit-Learn and the MLflow Tracking Server.
-* **DevOps Ready:** Contains native Docker containerization and a Jenkins CI / CD pipeline.
+* **DevOps Ready:** Contains native Docker containerization and a Jenkins CI/CD pipeline.
 
 ## 📦 Tech Stack
 
