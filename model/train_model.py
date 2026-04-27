@@ -7,18 +7,24 @@ from sklearn.linear_model import LogisticRegression
 # Create or set experiment
 mlflow.set_experiment("Classroom Analytics Experiment")
 
-data = load_iris()
+@mlflow.trace(name="load_and_prepare_data")
+def load_and_prepare_data():
+    data = load_iris()
+    X_train, X_test, y_train, y_test = train_test_split(
+        data.data, data.target, test_size=0.2
+    )
+    return X_train, X_test, y_train, y_test
 
-X_train, X_test, y_train, y_test = train_test_split(
-    data.data, data.target, test_size=0.2
-)
+@mlflow.trace(name="train_and_evaluate_model")
+def train_and_evaluate_model(X_train, X_test, y_train, y_test):
+    model = LogisticRegression(max_iter=200)
+    model.fit(X_train, y_train)
+    accuracy = model.score(X_test, y_test)
+    return model, accuracy
 
 with mlflow.start_run():
-
-    model = LogisticRegression()
-    model.fit(X_train, y_train)
-
-    accuracy = model.score(X_test, y_test)
+    X_train, X_test, y_train, y_test = load_and_prepare_data()
+    model, accuracy = train_and_evaluate_model(X_train, X_test, y_train, y_test)
 
     mlflow.log_param("model", "LogisticRegression")
     mlflow.log_metric("accuracy", accuracy)
