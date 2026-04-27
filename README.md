@@ -6,7 +6,7 @@ This repository connects real-time video stream inferences, a local MLOps pipeli
 
 ---
 
-## 🏗️ Project Architecture & The "Minor Details"
+## 🏗️ Project Architecture 
 
 The application consists of distinct decoupled components. Here is an extremely detailed breakdown of every integrated part of the repository:
 
