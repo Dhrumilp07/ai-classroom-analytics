@@ -2,7 +2,7 @@
 
 An AI-powered application designed to detect and rate student engagement in a classroom environment using computer vision and machine learning. 
 
-This repository connects real-time video stream inferences, a local MLOps pipeline for tracking algorithm parameters, and a protected REST API for retrieving session-level metrics. It includes infrastructure scaffolds for CI/CD and Containerization.
+This repository connects real-time video stream inferences, a local MLOps pipeline for tracking algorithm parameters, and a protected REST API for retrieving session-level metrics. It includes infrastructure scaffolds for CI / CD and Containerization.
 
 ---
 
